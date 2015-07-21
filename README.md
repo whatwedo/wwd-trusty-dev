@@ -1,4 +1,4 @@
-#whatwedo - wwwd-trusty-dev
+#whatwedo - wwd-trusty-dev
 We at [whatwedo](https://whatwedo.ch/) are often devloping applications in VM's. One [Vagrant VM](https://www.vagrantup.com/) per project would be the perfect solution but it can cause problems if you are working on a lot of different projects. The installation of every VM takes a bunch of time and the maintenance of the different VM's is a real pain. So we decided to use one VM for all projects.
 
 ##Requirements
@@ -12,7 +12,7 @@ We at [whatwedo](https://whatwedo.ch/) are often devloping applications in VM's.
 To use the fully configured VM just run the following commands:
 
 ```
-wget https://github.com/whatwedo/www-trusty-dev/blob/master/Vagrantfile
+wget https://raw.githubusercontent.com/whatwedo/wwd-trusty-dev/master/Vagrantfile
 vagrant up
 ```
 
@@ -110,7 +110,7 @@ vagrant up
 Each service of the above listed services is disabled per default. You have to start them manually.
 
 ##Bugs and Issues
-If you have any problems with this image, feel free to open a new issue in our issue tracker [https://github.com/whatwedo/www-trusty-dev/issues](https://github.com/whatwedo/www-trusty-dev/issues)
+If you have any problems with this image, feel free to open a new issue in our issue tracker [https://github.com/whatwedo/wwd-trusty-dev/issues](https://github.com/whatwedo/wwd-trusty-dev/issues)
 
 ##License
-This image is licensed under the MIT License. The full license text is available under [https://github.com/whatwedo/www-trusty-dev/blob/master/LICENSE](https://github.com/whatwedo/www-trusty-dev/blob/master/LICENSE).
+This image is licensed under the MIT License. The full license text is available under [https://github.com/whatwedo/wwd-trusty-dev/blob/master/LICENSE](https://github.com/whatwedo/wwd-trusty-dev/blob/master/LICENSE).

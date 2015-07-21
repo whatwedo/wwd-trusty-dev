@@ -1,4 +1,4 @@
-#whatwedo - wwwd-trusty-dev
+#whatwedo - wwd-trusty-dev
 
 ##Build
 
