@@ -72,6 +72,7 @@ vagrant up
 * mariadb-server
 * mercurial
 * mongodb-org
+* nfs-common
 * nginx
 * ngrep
 * nodejs
@@ -93,6 +94,7 @@ vagrant up
 * php5-pgsql
 * php5-sqlite
 * phpunit
+* portmap
 * postgresql
 * postgresql-client
 * python-dev
@@ -105,6 +107,7 @@ vagrant up
 * symfony-installer
 * telnet
 * tomcat
+* uglify-js
 * unzip
 * vim
 * virtualbox-guest-utils

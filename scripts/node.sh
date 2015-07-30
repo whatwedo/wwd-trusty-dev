@@ -23,3 +23,6 @@ npm install -g bower-update
 
 #localtunnel
 npm install -g localtunnel
+
+#uglify-js
+npm install -g uglify-js
