@@ -15,6 +15,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.synced_folder ENV['HOME'], ENV['HOME'],
     :nfs => !Vagrant::Util::Platform.windows?
 
+  #Add SSH key
+  config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.ssh/id_rsa")}' > '/home/vagrant/.ssh/id_rsa'"
+  config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.ssh/id_rsa.pub")}' > '/home/vagrant/.ssh/id_rsa.pub'"
+
+  #Add gitconfig
+  config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.gitconfig")}' > '/home/vagrant/.gitconfig'"
+  config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.gitignore_global")}' > '/home/vagrant/.gitignore_global'"
+
   #Disable vagrant share
   config.vm.synced_folder ".", "/vagrant", disabled: true
 
