@@ -70,6 +70,7 @@ vagrant up
 * mercurial
 * mongodb-org
 * nginx
+* ngrep
 * nodejs
 * npm
 * npm-check-updates
