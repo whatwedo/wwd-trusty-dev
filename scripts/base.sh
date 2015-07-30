@@ -54,3 +54,6 @@ apt-get install -y m4
 
 #Install ngrep
 apt-get install -y ngrep
+
+#Install cloc
+apt-get install -y cloc

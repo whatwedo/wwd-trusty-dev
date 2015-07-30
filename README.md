@@ -44,6 +44,7 @@ vagrant up
 * build-essential
 * bundler
 * ca-certificates 
+* cloc
 * composer
 * couchdb
 * curl
