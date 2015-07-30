@@ -63,6 +63,7 @@ vagrant up
 * libsqlite3-dev
 * libssl-dev
 * localepurge
+* localtunnel
 * m4
 * mailcatcher
 * mariadb-server

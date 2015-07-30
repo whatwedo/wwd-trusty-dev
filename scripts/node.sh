@@ -20,3 +20,6 @@ npm install -g npm-check-updates
 
 #bower-update
 npm install -g bower-update
+
+#localtunnel
+npm install -g localtunnel
