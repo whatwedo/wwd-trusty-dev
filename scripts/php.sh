@@ -24,6 +24,11 @@ mv wp-cli.phar /usr/local/bin/wp
 #Install laravel
 composer global require "laravel/installer=~1.1"
 
+#Install phpunit
+wget https://phar.phpunit.de/phpunit.phar
+chmod +x phpunit.phar
+mv phpunit.phar /usr/local/bin/phpunit
+
 #Remove php-fpm from runlevel and stop
 sed -i 's/^start\son/#start on/g' /etc/init/php5-fpm.conf
 service php5-fpm stop || true

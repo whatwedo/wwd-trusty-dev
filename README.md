@@ -92,6 +92,7 @@ vagrant up
 * php5-mysql
 * php5-pgsql
 * php5-sqlite
+* phpunit
 * postgresql
 * postgresql-client
 * python-dev
