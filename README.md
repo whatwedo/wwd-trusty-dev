@@ -43,7 +43,9 @@ vagrant up
 * bower-update
 * build-essential
 * bundler
-* ca-certificates 
+* ca-certificates
+* capifony
+* capistrano
 * cloc
 * composer
 * couchdb

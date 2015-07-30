@@ -11,3 +11,9 @@ curl -sSL https://get.rvm.io | sudo bash -s stable --ruby
 
 #Install mailcatcher
 gem install mailcatcher
+
+#Install capistrano
+gem install capistrano
+
+#Install capifony
+gem install capifony
