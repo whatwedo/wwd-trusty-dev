@@ -18,6 +18,10 @@ service docker restart
 curl -L https://github.com/docker/compose/releases/download/1.1.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 
+#Install docker-nuke
+curl -L https://gist.githubusercontent.com/n3r0-ch/30c628813b67190d309d/raw/e915b9b79320f760ed8f7fda271958b9f85fb73d/docker-nuke > /usr/local/bin/docker-nuke
+chmod +x /usr/local/bin/docker-nuke
+
 #Remove from runlevel and stop
 sed -i 's/^start\son/#start on/g' /etc/init/docker.conf
 service docker stop || true

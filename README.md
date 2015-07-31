@@ -53,6 +53,7 @@ vagrant up
 * dnsutils
 * docker
 * docker-compose
+* docker-nuke
 * elasticsearch
 * git
 * golang
