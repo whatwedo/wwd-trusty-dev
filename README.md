@@ -8,7 +8,6 @@ We at [whatwedo](https://whatwedo.ch/) are often devloping applications in VM's.
 ##Usage
 
 ###Start
-
 To use the fully configured VM just run the following commands:
 
 ```
@@ -29,11 +28,12 @@ vagrant up
 | Vagrant Box | [whatwedo/wwd-trusty-dev](https://atlas.hashicorp.com/whatwedo/boxes/wwd-trusty-dev) |
 
 ##Logins
+
 | Description | Username | Password |
 |---|---|---|
 | Local User | vagrant | vagrant |
-| MySQL root user | root | root |
-| Postgres root user | postgres | postgres |
+| MySQL | root | root |
+| Postgres | postgres | postgres |
 
 ##Installed software and packages
 
@@ -118,6 +118,33 @@ vagrant up
 * zlib1g-dev
 
 Each service of the above listed services is disabled per default. You have to start them manually.
+
+##Shared Folders and Files
+Your home folder will be mounted automatically to the same path in the VM. For example the home directory `/Users/tux` on the host system will be mounted as `/Users/tux` in your VM. If required you can simply symlink your projects (`ls -s /Users/tux/myproject /var/www/html/myproject`).
+
+The following files will be copied on the first VM start to the home direcory of the vagrant user:
+
+* ~/.ssh/id_rsa
+* ~/.ssh/id_rsa.pub
+* ~/.gitconfig
+* ~/.gitignore_global
+
+Changes after the first VM start will not automatically taken over.
+
+##DNS
+For a easy development process the following public DNS Records are available:
+
+```
+local.we.hn       IN    A      192.168.192.168
+*.local.we.hn     IN    A      192.168.192.168
+```
+
+##Update VM
+There's a check on every startup which verfy if there is a newer vagrant box is available. If theres a newer version available you can use the following command to update:
+
+```
+vagrant box update && vagrant destroy && vagrant up
+```
 
 ##Bugs and Issues
 If you have any problems with this image, feel free to open a new issue in our issue tracker [https://github.com/whatwedo/wwd-trusty-dev/issues](https://github.com/whatwedo/wwd-trusty-dev/issues)
