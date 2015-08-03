@@ -59,10 +59,11 @@ vagrant up
 * golang
 * grunt-cli
 * gulp
-* ibapache2-mod-php5
 * java
 * language-pack-en
 * laravel
+* less
+* libapache2-mod-php5
 * libpcre3-dev
 * libsqlite3-dev
 * libssl-dev

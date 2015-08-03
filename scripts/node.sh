@@ -26,3 +26,6 @@ npm install -g localtunnel
 
 #uglify-js
 npm install -g uglify-js
+
+#Install less
+npm install -g less
