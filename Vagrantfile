@@ -49,6 +49,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     #Allow symlink on shared folders
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
+
+    #Share VPN with Host
+    vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
 end
