@@ -11,6 +11,7 @@ echo "cgi.fix_pathinfo = 0;" >> /etc/php5/fpm/php.ini
 #Install composer
 curl -sS https://getcomposer.org/installer | php 
 mv composer.phar /usr/local/bin/composer
+chown -R vagrant:vagrant /home/vagrant/.composer
 
 #Install symfony installer
 curl -LsS http://symfony.com/installer -o /usr/local/bin/symfony
