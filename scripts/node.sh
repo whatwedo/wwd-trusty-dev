@@ -5,6 +5,7 @@ export DEBIAN_FRONTEND=noninteractive
 #Node
 apt-get install -y npm nodejs
 ln -s /usr/bin/nodejs /usr/bin/node
+ln -s /usr/bin/node /usr/local/bin/node
 
 #Grunt
 npm install -g grunt-cli
