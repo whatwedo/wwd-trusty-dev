@@ -32,7 +32,7 @@ vagrant up
 | Description | Username | Password |
 |---|---|---|
 | Local User | vagrant | vagrant |
-| MySQL | root | root |
+| MySQL | root | <empty> |
 | Postgres | postgres | postgres |
 
 ##Installed software and packages
