@@ -3,7 +3,7 @@ set -e
 export DEBIAN_FRONTEND=noninteractive
 
 #Install apache
-apt-get install -y apache2
+apt-get install -y apache2 apache2-utils
 
 #Remove default files
 rm -rf /var/www/html/*
