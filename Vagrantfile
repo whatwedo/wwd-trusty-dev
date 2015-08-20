@@ -9,22 +9,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "whatwedo/wwd-trusty-dev"
 
   #Add private network
-  config.vm.network "private_network", ip: "192.168.192.168"
+  config.vm.network "private_network", type: "dhcp"
 
   #Add home directory as synced folder
-  config.vm.synced_folder ENV['HOME'], ENV['HOME'],
+  config.vm.synced_folder ".", "/vagrant",
     :nfs => !Vagrant::Util::Platform.windows?
 
   #Add SSH key
   config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.ssh/id_rsa")}' > '/home/vagrant/.ssh/id_rsa'"
   config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.ssh/id_rsa.pub")}' > '/home/vagrant/.ssh/id_rsa.pub'"
-
-  #Add gitconfig
-  config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.gitconfig")}' > '/home/vagrant/.gitconfig'"
-  config.vm.provision :shell, :inline => "echo -e '#{File.read("#{Dir.home}/.gitignore_global")}' > '/home/vagrant/.gitignore_global'"
-
-  #Disable vagrant share
-  config.vm.synced_folder ".", "/vagrant", disabled: true
 
   config.vm.provider "virtualbox" do |vb|
 
@@ -50,8 +43,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     #Allow symlink on shared folders
     vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
 
-    #Share VPN with Host
+    #Share VPN from Host
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
+
+  #Install dependencies
+  #config.vm.provision "shell",
+  #    inline: "sudo sh /vagrant/vm-init/install.sh"
 
 end

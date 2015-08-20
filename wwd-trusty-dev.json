@@ -71,6 +71,7 @@
         "scripts/reboot.sh",
 
         "scripts/docker.sh",
+        "scripts/puppet.sh",
 
         "scripts/reboot.sh",
 

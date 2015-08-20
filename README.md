@@ -1,5 +1,5 @@
 #whatwedo - wwd-trusty-dev
-We at [whatwedo](https://whatwedo.ch/) are often devloping applications in VM's. One [Vagrant VM](https://www.vagrantup.com/) per project would be the perfect solution but it can cause problems if you are working on a lot of different projects. The installation of every VM takes a bunch of time and the maintenance of the different VM's is a real pain. So we decided to use one VM for all projects.
+We at [whatwedo](https://whatwedo.ch/) are often devloping applications in VM's. The installation of every VM takes a bunch of time and the maintenance of the different VM's is a real pain. So we decided to use one big base image for all projects.
 
 ##Requirements
 * [Virtualbox](https://www.virtualbox.org/)
@@ -24,7 +24,7 @@ vagrant up
 | Hostname | wwd-trusty-dev |
 | Domain | vagrant.local |
 | eth0 (NAT) | DHCP |
-| eth1 (Host-Only)  | 192.168.192.168 |
+| eth1 (Host-Only)  | DHCP |
 | Vagrant Box | [whatwedo/wwd-trusty-dev](https://atlas.hashicorp.com/whatwedo/boxes/wwd-trusty-dev) |
 
 ##Logins
@@ -99,6 +99,7 @@ vagrant up
 * portmap
 * postgresql
 * postgresql-client
+* puppet
 * python-dev
 * python-pip
 * redis-server
@@ -119,26 +120,6 @@ vagrant up
 * zlib1g-dev
 
 Each service of the above listed services is disabled per default. You have to start them manually.
-
-##Shared Folders and Files
-Your home folder will be mounted automatically to the same path in the VM. For example the home directory `/Users/tux` on the host system will be mounted as `/Users/tux` in your VM. If required you can simply symlink your projects (`ls -s /Users/tux/myproject /var/www/html/myproject`).
-
-The following files will be copied on the first VM start to the home direcory of the vagrant user:
-
-* ~/.ssh/id_rsa
-* ~/.ssh/id_rsa.pub
-* ~/.gitconfig
-* ~/.gitignore_global
-
-Changes after the first VM start will not automatically taken over.
-
-##DNS
-For a easy development process the following public DNS Records are available:
-
-```
-local.we.hn       IN    A      192.168.192.168
-*.local.we.hn     IN    A      192.168.192.168
-```
 
 ##Update VM
 There's a check on every startup which verfy if there is a newer vagrant box is available. If theres a newer version available you can use the following command to update:
