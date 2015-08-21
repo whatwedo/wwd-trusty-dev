@@ -1,5 +1,5 @@
 #whatwedo - wwd-trusty-dev
-We at [whatwedo](https://whatwedo.ch/) are often devloping applications in VM's. The installation of every VM takes a bunch of time and the maintenance of the different VM's is a real pain. So we decided to use one big base image for all projects.
+We at [whatwedo](https://whatwedo.ch/) are often devloping applications in VM's. The installation of every VM takes a bunch of time and the maintenance of the different VM's is a real pain. So we decided to use one big base box for all projects.
 
 ##Requirements
 * [Virtualbox](https://www.virtualbox.org/)
