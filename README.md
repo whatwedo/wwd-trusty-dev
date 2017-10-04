@@ -1,3 +1,5 @@
-#whatwedo - wwd-trusty-dev
+![deprecated](http://img.shields.io/badge/status-deprecated-red.png)
 
-DEPRECATED: Use https://github.com/whatwedo/Vaprobash instead
+# whatwedo - wwd-trusty-dev
+
+Use https://github.com/whatwedo/Vaprobash instead
